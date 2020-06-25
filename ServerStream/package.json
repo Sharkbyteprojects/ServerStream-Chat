@@ -10,8 +10,8 @@
     "build": "gulp",
     "clean": "tsc --build --clean"
   },
-  "repository" : {
-    "type" : "git",
+  "repository": {
+    "type": "git",
     "url": "https://github.com/Sharkbyteprojects/ServerStream-Chat.git"
   },
   "devDependencies": {
