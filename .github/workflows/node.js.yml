@@ -30,7 +30,7 @@ jobs:
        cp ../LICENSE .
        npm i&&npm i gulp-cli -g
        npm run build
-       rm -rf app.ts node_modules static/jquery.js static/main.js views/index.html tsconfig.json
+       rm -rf app.ts node_modules static/jquery.js static/main.js views/index.html tsconfig.json ServerStream.njsproj
        cd ..
     - name: Build project # This would actually build your project, using zip for an example artifact
       run: |
