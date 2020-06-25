@@ -1,5 +1,5 @@
 {
-  "name": "server-stream",
+  "name": "@Sharkbyteprojects/ServerStream-Chat",
   "version": "0.0.0",
   "description": "ServerStream",
   "main": "app.js",
