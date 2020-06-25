@@ -24,7 +24,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: |
+    - name: Build
+      run: |
        cd ServerStream
        cp ../LICENSE .
        npm i&&npm i gulp-cli -g
@@ -54,3 +55,17 @@ jobs:
           asset_path: ./server.zip
           asset_name: server.zip
           asset_content_type: application/zip
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+      - run: cd ServerStream
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
