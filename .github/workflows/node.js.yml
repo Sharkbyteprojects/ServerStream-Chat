@@ -33,7 +33,7 @@ jobs:
        cd ..
     - name: Build project # This would actually build your project, using zip for an example artifact
       run: |
-          zip --junk-paths server ServerStream
+          zip server ServerStream
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
