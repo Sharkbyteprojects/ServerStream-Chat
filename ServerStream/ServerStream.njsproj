@@ -36,6 +36,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="static\Streams.svg" />
+    <Content Include="static\style.less">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\index.html">
       <SubType>Code</SubType>
     </Content>

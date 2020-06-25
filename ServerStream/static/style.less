@@ -1,0 +1,42 @@
+﻿@import url("https://use.typekit.net/siy7owe.css");
+@servercolor: #fe3e00;
+@fgcolor: #00ff92;
+@clientcolor: #22ff00;
+@bgcolor: #000000;
+@bordercol:#fc2d2d;
+@bgcolori:#0043fc;
+@fgcolori:#ffffff;
+@div:#00ffff;
+////////////////////////////////
+label{
+    background-color:@bgcolor;
+}
+.bordered {
+    border-top: dotted 1px black;
+    border-bottom: solid 2px black;
+    border-color:@bordercol;
+}
+.server {
+    color: @servercolor;
+}
+
+.cli {
+    color: @clientcolor;
+}
+body {
+    color: @fgcolor;
+    background-color: @bgcolor;
+}
+input {
+    .bordered();
+    background-color:@bgcolori;
+    color:@fgcolori;
+}
+div{
+    .bordered();
+    background-color:@div;
+}
+pre {
+    font-family: "source-code-pro", monospace;
+    font-size: 18px;
+}
