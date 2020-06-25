@@ -31,8 +31,7 @@ $(document).ready(() => {
         function listener() {
             var source = new EventSource(url);
             source.onerror = () => {
-                alert("An Error occured, we try to reconnect you!");
-                listener();
+                console.warn("Disconnected");
             };
             source.onmessage = function (e) {
                 const data = e.data;
