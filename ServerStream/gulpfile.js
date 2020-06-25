@@ -4,6 +4,7 @@ const rename = require("gulp-rename");
 const webpack = require("webpack-stream");
 var ts = require('gulp-typescript');
 const minify = require("gulp-babel-minify");
+const htmlmin = require("gulp-htmlmin");
 const files = ["maino.js"];
 function html() {
     return gulp.src('views/index.html').pipe(htmlmin({ collapseWhitespace: true })).pipe(rename("indexo.html")).pipe(gulp.dest('views'));
@@ -33,4 +34,4 @@ function server() {
 }
 exports.client = gulp.parallel(client, html);
 exports.server = server;
-exports.default = gulp.parallel(client, server,html);
+exports.default = gulp.parallel(client, server, html);
